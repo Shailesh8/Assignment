@@ -50,7 +50,7 @@ public class LongestSubarray {
 			}
 		}
 
-		System.out.println("Start Index:" + lower_limit);
+		System.out.println("Start Index:" + max_lower_index);
 		System.out.println("Length: " + maxLengthSubArray);
 		System.out.println("Sum: " + max_sum);
 		System.out.print("Elements: ");
