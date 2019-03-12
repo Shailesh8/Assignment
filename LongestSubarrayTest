@@ -1,0 +1,25 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class LongestSubarrayTest {
+
+	@Test
+	public void test() throws NullArrayException {
+		LongestSubarray test = new LongestSubarray();
+		int arr[] = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+		ResultObject resultObject =test.lengthLongestSubArrayWithMaxSum(arr);
+		int expectedarr[] = {4,-1,2,1};
+		ResultObject expectedResultObject = new ResultObject(3, 4, 6, expectedarr);
+		assertEquals(expectedResultObject, resultObject);
+		
+	}
+
+	@Test(expected = NullArrayException.class)
+	public void test2() throws NullArrayException{
+		int arr[] = {};
+		LongestSubarray test = new LongestSubarray();
+		ResultObject resultObject =test.lengthLongestSubArrayWithMaxSum(arr);
+		
+	}
+}
